@@ -1,0 +1,89 @@
+@import './reset.scss';
+@font-face {
+	font-family: 'Roboto';
+	src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+.container {
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-image: url('../assets/summer-bg.jpg');
+	background-size: cover;
+	input {
+		width: 10%;
+	}
+}
+
+.summer-bg {
+	background-image: url('../assets/summer-bg.jpg');
+	background-size: cover;
+}
+
+.rainy-bg {
+	background-image: url('../assets/rainy-bg.jpg');
+	background-size: cover;
+}
+
+.winter-bg {
+	background-image: url('../assets/winter-bg.jpg');
+	background-size: cover;
+}
+
+header {
+	margin-top: 30px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 64px;
+	font-weight: 600;
+	color: #ee7235;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+}
+.weather {
+	margin: 22px;
+	height: 230px;
+	width: 240px;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	> .sunIcon,
+	.rainIcon,
+	.snowIcon {
+		width: 30%;
+		height: 30%;
+	}
+	.pauseIcon {
+		width: 30%;
+		height: 30%;
+		display: none;
+	}
+}
+
+.sun {
+	background-image: url('../assets/summer-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.rain {
+	background-image: url('../assets/rainy-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.snow {
+	background-image: url('../assets/winter-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
