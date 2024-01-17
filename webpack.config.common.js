@@ -5,11 +5,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
-	entry: './index.js',
+	entry: './index.ts',
 	output: {
 		filename: '[name].[contenthash].js',
 		path: path.resolve(__dirname, 'dist'),
 		clean: true
+	},
+	resolve: {
+		extensions: ['.js', '.ts', '.jsx', '.tsx']
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -58,6 +61,11 @@ module.exports = {
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
 				type: 'asset/resource'
+			},
+			{
+				test: /\.[tj]sx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
